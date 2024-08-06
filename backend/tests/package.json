@@ -1,0 +1,16 @@
+{
+  "name": "node-backend-tests",
+  "version": "1.0.0",
+  "description": "Files and scripts for backend node testing",
+  "main": "package.json",
+  "scripts": {
+    "basic-test": "artillery run basic.test.yml --output outputs/basic.test.json",
+    "mongo-test": "artillery run mongo.test.yml --output outputs/mongo.test.json",
+    "login-test": "artillery run login.test.yml --output outputs/login.test.json"
+  },
+  "keywords": [
+    "tests"
+  ],
+  "author": "Madhav Jha",
+  "license": "ISC"
+}

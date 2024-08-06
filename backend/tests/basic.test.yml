@@ -1,0 +1,11 @@
+config:
+   target: "http://34.203.119.141:5000"
+   phases:
+      - duration: 10
+        arrivalRate: 300
+
+scenarios:
+   - name: "home-page"
+     flow:
+        - get:
+             url: "/"

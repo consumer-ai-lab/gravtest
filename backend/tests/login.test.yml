@@ -1,0 +1,25 @@
+config:
+   target: "http://34.203.119.141:5000"
+   phases:
+      - duration: 10
+        arrivalRate: 20
+        name: "Warming up"
+      - duration: 5
+        arrivalRate: 300
+        name: "Sustained load"
+   processor: "scripts/fake-login.js"
+
+scenarios:
+   - name: "user-login"
+     flow:
+        - get:
+             url: "/"
+        - think: 1
+        - post:
+             url: "/api/userdata"
+             beforeRequest: generate_login
+             json:
+                username: "{{username}}"
+                user_password: "{{test_password}}"
+                test_password: "{{batch_password}}"
+        - think: 1

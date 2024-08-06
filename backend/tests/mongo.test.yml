@@ -1,0 +1,23 @@
+config:
+   target: "http://34.203.119.141:5000"
+   phases:
+      - duration: 10
+        arrivalRate: 20
+        name: "Warming up"
+      - duration: 10
+        arrivalRate: 300
+        name: "Sustained load"
+   processor: "scripts/fake-id.js"
+
+scenarios:
+   - name: "Mongo-DB"
+     flow:
+        - get:
+             url: "/"
+        - think: 1
+        - post:
+             url: "/api/load-test"
+             beforeRequest: generate_record_ID
+             json:
+                ID: "{{ ID }}"
+        - think: 1

@@ -1,0 +1,30 @@
+{
+  "name": "WCL-test-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1008.0",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.1.1",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "googleapis": "^88.2.0",
+    "jsonwebtoken": "^9.0.0",
+    "mime": "^2.5.2",
+    "mongodb": "^5.6.0",
+    "mongoose": "^6.0.11",
+    "multer": "^1.4.3",
+    "node-msoffice-pdf": "0.0.7",
+    "nodemon": "^2.0.12",
+    "xlsx": "^0.18.5"
+  }
+}

@@ -1,0 +1,13 @@
+/application/data/test_submission
+/application/__pycache__
+/application/prints
+/application/.venv
+
+/backend/node_modules
+
+.venv
+
+.idea/
+.vscode/
+
+*.env
